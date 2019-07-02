@@ -13,11 +13,14 @@ body {
   }
   
   /* general */
-  
+
+.weatherStuff {
+  height: 20px;
+}
 .bio
 {
   margin: 0px 15px 0px 15px;
-  float:left;
+  /* float:left; */
   width: 50%;
   height: 30px;
 }
@@ -73,18 +76,21 @@ body {
   h3 {
     font-size: 22px;
   }
-  
+
+  .weather {
+   padding-left: 40px;
+  }
   /* header */
-  
+
   #masthead {
-    position: fixed;
     z-index: 99;
+    /* position: fixed; */
     width: 100%;
-    margin: 0 0 30px;
-    overflow: auto;
+    margin: 30px 0 30px;
+    /* overflow: auto; */
     color: #ffffff;
     background: linear-gradient(110deg, rgb(85, 21, 21) 60%, red 60%);
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
   }
   
   #logo {
@@ -104,7 +110,7 @@ body {
   nav {
     float: right;
     width:100%;
-    margin-top: 25px;
+    /* margin-top: 25px; */
   }
   
   nav a {
@@ -159,12 +165,12 @@ body {
   
   #main-container {
     padding-top: 130px;
-    float: left;
+    /* float: left; */
     min-height: calc(100vh - 70px);
   }
   
   .main-section {
-    float: left;
+    /* float: left; */
     width: 100%;
     max-width: 960px;
     padding: 30px;
@@ -255,3 +261,6 @@ body {
     border: 0 none;
   }
   
+  #test {
+    margin-left: 30px;
+  }

@@ -19,16 +19,32 @@
 </head>
 
 <body>
-        <div class="row">
+        <div class="row" id="test1">
                 <header id="masthead">
-                  <div class="container-fluid">
+                  <div class="container-fluid bg-dark uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-top-center" style="padding: 10px" >
                       
-                      <nav class="navbar navbar-expand-md bg-dark navbar-dark uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-top-center">
+                    <div class="row weatherStuff">
+                          <div class="col-md-4"></div>
+                          <div class="col-md-4">
+                            <div class="row weather">
+                                Arlington Weather:
+                                <div class="icon"></div>
+                                <div class="temp"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-4"></div>
+                        </div>
+                  
+                      <nav class="navbar navbar-expand-md navbar-dark">
+                          
                           <div class="col-md-9">
                             
                           <a class="navbar-brand navbar-custom" a href="index.html" id="logo">Home Page</a>
+                        
+                
                           </div>
                           
+                      
                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                             <span class="navbar-toggler-icon"></span>
                           </button>
@@ -36,30 +52,24 @@
                             <ul class="navbar-nav">
                               
                               <li class="nav-item">
-                                <a href="">Vote</a>
+                                <a href="leaderboard.html">Vote</a>
                               </li>
                               <li class="nav-item">
-                                <a href="">Sign In</a>
+                                <a href="Login.html">Sign In</a>
                               </li>    
                             </ul>
+                        
                            
                           </div>
-                          </div>
+                        
+                      
+                      
                       </nav>
+                    </div>
                         <br>
                 </header>    
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        
-          
-              <div class="row">
+              <div class="row" id="test">
         <div class="container col-lg-5 uk-animation-slide-left" id = "bio">
         <div class="row">
           <div class="col-lg-12" style="background-color:#343a40;" >
@@ -86,7 +96,7 @@
           
           
           
-          <div class="container col-lg-5 uk-animation-slide-right" style="background-color:#343a40;" id = "chatty">
+          <div class="container col-lg-5 uk-animation-slide-right" style="background-color:#343a40; height:1000px" id = "chatty">
               <div class="mx-auto">
                 <div class="p-3 mb-2 bg-info text-white">Chat Window</div>
                 <div class="pre-scrollable" style ="height: 700px" id = "chat-box">

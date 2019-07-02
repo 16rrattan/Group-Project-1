@@ -1,6 +1,40 @@
 var user;
 $(document).ready(function() {
 
+  var APIKey = "166a433c57516f51dfab1f7edaed8413";
+
+  // Here we are building the URL we need to query the database
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
+    "q=Arlington,Virginia&units=imperial&appid=" + APIKey;
+
+  // Here we run our AJAX call to the OpenWeatherMap API
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+    // We store all of the retrieved data inside of an object called "response"
+    .then(function(response) {
+
+      // Log the queryURL
+      console.log(queryURL);
+
+      // Log the resulting object
+      console.log(response);
+      var coolVaria = "<img src=https://openweathermap.org/img/wn/" + response.weather[0].icon + ".png>";
+      console.log(coolVaria);
+
+
+
+      // Transfer content to HTML
+      $(".icon").html("<a href='https://weather.com/weather/hourbyhour/l/USVA0023:1:US'>" + coolVaria + "</a>");
+      $(".temp").text(response.main.temp + "˚ F");
+
+      // Log the data in the console as well
+      console.log("Wind Speed: " + response.wind.speed);
+      console.log("Humidity: " + response.main.humidity);
+      console.log("Temperature (F): " + response.main.temp);
+    });
+
 $("#submit-btn").on("click", function(event) {
     event.preventDefault();
     console.log("Clicked");
