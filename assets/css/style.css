@@ -3,9 +3,11 @@ body {
     font-size: 18px;
     line-height: 34px;
     color: #777777;
-    background: url("../images/concrete_seamless.png");
+    background: linear-gradient(110deg, rgb(85, 21, 21) 60%, red 60%);
   }
-  
+  html{
+    background: linear-gradient(110deg, rgb(85, 21, 21) 60%, red 60%);
+  }
   * {
     box-sizing: border-box;
   }
@@ -15,15 +17,32 @@ body {
 .bio
 {
   margin: 0px 15px 0px 15px;
+  float:left;
+  width: 50%;
+  height: 30px;
 }
 
-  .container {
+#huge {
+  margin: 20px;
+}
+  /* .container {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
     clear: both;
-  }
-  
+  } */
+ #chatty
+ {
+   float: right;
+   margin: 0px 150px 0px 15px;
+   max-width: auto;
+   }
+
+   #chat
+   {
+     width: 100%;
+     
+   }
   h1,
   h2,
   h3,
@@ -64,7 +83,7 @@ body {
     margin: 0 0 30px;
     overflow: auto;
     color: #ffffff;
-    background: #ffffff;
+    background: linear-gradient(110deg, rgb(85, 21, 21) 60%, red 60%);
     border-bottom: 2px solid #cccccc;
   }
   

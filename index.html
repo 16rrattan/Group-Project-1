@@ -7,10 +7,12 @@
     <title>Home</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/uikit.min.css" />
     
-    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     
@@ -21,7 +23,7 @@
                 <header id="masthead">
                   <div class="container-fluid">
                       
-                      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                      <nav class="navbar navbar-expand-md bg-dark navbar-dark uk-card uk-card-default uk-card-body uk-animation-scale-up uk-transform-origin-top-center">
                           <div class="col-md-9">
                             
                           <a class="navbar-brand navbar-custom" a href="index.html" id="logo">Home Page</a>
@@ -39,7 +41,7 @@
                                 <a href="">Vote</a>
                               </li>
                               <li class="nav-item">
-                                <a href="">Game</a>
+                                <a href="">Sign In</a>
                               </li>    
                             </ul>
                            
@@ -57,14 +59,18 @@
         <br>
         <br>
         
-        <div class="container">
+        
+          
+              <div class="row">
+        <div class="container col-lg-5 uk-animation-slide-left" id = "bio">
         <div class="row">
-          <div class="col-lg-6" style="background-color:#343a40;" id = "bio">
-            <div class="mx-3">
+          <div class="col-lg-12" style="background-color:#343a40;" >
+            <div class="mx-auto">
             <div class="p-3 mb-2 bg-info text-white">BIO</div>
             <h4 class = "text-white" >Username:</h4> <p class = "text-white" id = "username">Dandy Boy</p>
 
-            <h4 class ="text-white" >name:</h4> <p class = "text-white username" > brett kavanaugh </p>
+            <h4 class ="text-white" >name:</h4> <p class = "text-white user" id ="name"> brett kavanaugh </p>
+            <h4 class ="text-white" >email:</h4> <p class = "text-white email" id ="email"> bkavanaugh420@gmail.com </p>
             
             <button type="button" class="btn btn-danger "><a href="https://github.com/chaostheory59" style="color: white">Github Profile</a></button>
             <button type="button" class="btn btn-danger "><a href="https://www.linkedin.com/in/brett-kavanaugh-818323180/" style="color: white">LinkedIn Profile</a></button>
@@ -76,41 +82,50 @@
                 <h4 class ="text-white" >About me:</h4> <p class ="text-white" id = "about">I am an Associate Justice of the Supreme Court of the United States. I was nominated by President Donald Trump to succeed Anthony Kennedy and took the oath of office on October 6, 2018. I previously served as a United States Circuit Judge of the United States Court of Appeals for the District of Columbia Circuit and as a staff lawyer for various offices of the federal government. I am a former drinker</p>
                 </div>
           </div>
-          </div>
-
-
-          <div class="col-lg-6" style="background-color:#343a40;" >
-            <div class="mx-3">
+        </div>
+      </div>
+    </div>
+          
+          
+          
+          <div class="container col-lg-5 uk-animation-slide-right" style="background-color:#343a40;" id = "chatty">
+              <div class="mx-auto">
                 <div class="p-3 mb-2 bg-info text-white">Chat Window</div>
-                <div class="pre-scrollable" id = "chat-box">
+                <div class="pre-scrollable" style ="height: 700px" id = "chat-box">
                   <li>
                   
                   </li>
                 </div>
-                <br>
-                <br>
-                <div class="row chat-text-box">
+                <div class="chat-text-box">
                     <form>
                       Chat Window:<br>
-                      <input type="text" class = "textbox" name="chattext" value="" id = "chat">
-                    <button id="submit-btn" type="submit" class="btn btn-danger">Send</button>
+                      <input type="text" class = "textbox" name="chattext" value="" id = "chat" style="width: 750px; padding: 10px; height: 50px; 
+                      display: block; font-family:Sans-serif; font-size:1.2em;">
+                      
+                    <button id="submit-btn" type="submit" class="btn btn-danger" style = "width: 100px; height: 50px">Send</button>
+                    </form>
                 </div>
-          </div>    
-          </div>
+              
+              </div>
         </div>
       </div>
-        
+       
             
           
         
 
  <!-- jQuery -->
  <script src="https://code.jquery.com/jquery.js"></script>
+ 
  <script src="assets/javascript/app.js"></script>
  <!-- Link to Moment.js should go here -->
  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
 
     
 </body>
