@@ -97,10 +97,19 @@
                 <div class="chat-text-box">
                     <form>
                       Chat Window:<br>
-                      <input type="text" class = "textbox" name="chattext" value="" id = "chat" style="width: 750px; padding: 10px; height: 50px; 
+                      <input type="text" class = "textbox" name="chattext" value="" id = "chat" style="width: auto; padding: 10px; height: 50px; 
                       display: block; font-family:Sans-serif; font-size:1.2em;">
                       
                     <button id="submit-btn" type="submit" class="btn btn-danger" style = "width: 100px; height: 50px">Send</button>
+                    <div id="gif">
+                        <br>
+                        <input type="text" class = "textbox" name="chattext" value="" id = "gifKeyword" style='width: auto; padding: 10px; height: 50px; display: block; font-family:Sans-serif; font-size:1.2em' placeholder='Input Keyword'>
+                        <button id="addGif" type="button" class="btn btn-danger" style = "width: 100px; height: 50px">Gif Search</button>
+                        <div id="addSendGif">
+                        </div>
+                    </div>
+                    <div id="gifDisplay">
+                    </div>
                     </form>
                 </div>
               
@@ -113,7 +122,10 @@
         
 
  <!-- jQuery -->
- <script src="https://code.jquery.com/jquery.js"></script>
+ <script
+ type="text/javascript"
+ src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+ </script>
  
  <script src="assets/javascript/app.js"></script>
  <!-- Link to Moment.js should go here -->
