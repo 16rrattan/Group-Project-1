@@ -307,6 +307,7 @@ function chatdisplay() {
         })
 
     })
+    updateScroll()
 
 }
 
@@ -458,13 +459,17 @@ $("body").on("click ", '.biolist', function() {
         $("#bio_bio").append(biobio);
     })
 
-
-
 });
 
+// function updateScroll() {
+//     var element = document.getElementById("chat-window");
+//     element.scrollTop = element.scrollHeight;
+// }
 
-
-
+window.onload = function() {
+    var objDiv = document.getElementById("chat-box");
+    objDiv.scrollTop = objDiv.scrollHeight;
+}
 
 
 
