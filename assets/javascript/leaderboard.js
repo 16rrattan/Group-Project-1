@@ -268,8 +268,10 @@ function chatbuttonsubmit() {
     console.log(inputtext);
     $("#input-text").val("")
     chatdisplay();
-    $(".chat-text-box").stop().animate({ scrollBottom: $(".chat-text-box")[0].scrollHeight }, 1000);
-
+    var console = $('#chat-box');
+    console.scrollTop(
+        console[0].scrollHeight - console.height()
+    );
 }
 
 function chatdisplaystart() {
@@ -278,6 +280,10 @@ function chatdisplaystart() {
         console.log(totalchat);
         $("#chat-box").empty();
         $("#chat-box").append(totalchat);
+        var console = $('#chat-box');
+        console.scrollTop(
+            console[0].scrollHeight - console.height()
+        );
     })
 };
 
@@ -411,7 +417,10 @@ $(document).on("click", "#sendGif-btn", function(event) {
         })
 
     })
-    $(".chat-text-box").stop().animate({ scrollBottom: $(".chat-text-box")[0].scrollHeight }, 1000);
+    var console = $('#chat-box');
+    console.scrollTop(
+        console[0].scrollHeight - console.height()
+    );
 });
 
 
