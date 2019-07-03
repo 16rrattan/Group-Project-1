@@ -468,5 +468,5 @@ $("body").on("click ", '.biolist', function() {
 
 
 biolist();
-chatdisplaystart();
+window.setInterval(chatdisplaystart, 1000);
 display();
