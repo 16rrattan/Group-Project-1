@@ -268,10 +268,8 @@ function chatbuttonsubmit() {
     console.log(inputtext);
     $("#input-text").val("")
     chatdisplay();
-    var console = $('#chat-box');
-    console.scrollTop(
-        console[0].scrollHeight - console.height()
-    );
+
+
 }
 
 function chatdisplaystart() {
@@ -280,10 +278,8 @@ function chatdisplaystart() {
         console.log(totalchat);
         $("#chat-box").empty();
         $("#chat-box").append(totalchat);
-        var console = $('#chat-box');
-        console.scrollTop(
-            console[0].scrollHeight - console.height()
-        );
+
+
     })
 };
 
@@ -417,10 +413,7 @@ $(document).on("click", "#sendGif-btn", function(event) {
         })
 
     })
-    var console = $('#chat-box');
-    console.scrollTop(
-        console[0].scrollHeight - console.height()
-    );
+
 });
 
 
@@ -446,11 +439,10 @@ function biolist() {
 
 $("body").on("click ", '.biolist', function() {
     var bioname;
-    var biogithub;
     var biobio;
     $("#bio_name").empty();
     $("#bio_github").empty();
-    $("#bio-bio").empty();
+    $("#bio_bio").empty();
     console.log("button works")
     console.log(this.id);
     database.ref('profiles/' + this.id + "/name").once("value", function(snapshot) {
