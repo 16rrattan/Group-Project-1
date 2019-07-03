@@ -278,7 +278,11 @@ function chatdisplaystart() {
         console.log(totalchat);
         $("#chat-box").empty();
         $("#chat-box").append(totalchat);
+        $("#chat-box").animate({
+            scrollTop: $("#chat-box")[0].scrollHeight - $("#chat-box").height()
+        }, 1, function() {
 
+        })
 
     })
 };
@@ -307,7 +311,7 @@ function chatdisplay() {
         })
 
     })
-    updateScroll()
+
 
 }
 
@@ -466,10 +470,19 @@ $("body").on("click ", '.biolist', function() {
 //     element.scrollTop = element.scrollHeight;
 // }
 
-window.onload = function() {
-    var objDiv = document.getElementById("chat-box");
-    objDiv.scrollTop = objDiv.scrollHeight;
-}
+// var $el = $("#chat-box");
+
+// function anim() {
+//     var st = $el.scrollTop();
+//     var sb = $el.prop("scrollHeight");
+//     $el.animate({ scrollTop: st < sb / 5 ? sb : 0 }, 1000, anim);
+// }
+
+// function stop() {
+//     $el.stop();
+// }
+// anim();
+// $el.hover(stop, anim);
 
 
 
