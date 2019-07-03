@@ -187,7 +187,6 @@ $("#submit-login").on("click", function(event) {
     }
     $("#login-name").empty()
     $("#login-password").empty()
-    window.location.replace("https://16rrattan.github.io/Group-Project-1/index.html");
 });
 
 
@@ -428,7 +427,7 @@ $(document).on("click", "#sendGif-btn", function(event) {
 
 function biolist() {
 
-
+    $(".bio_list").empty();
     var ranking = firebase.database().ref("ranking/");
 
     ranking.orderByValue().on("value", function(data) {
