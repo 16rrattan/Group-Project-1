@@ -337,59 +337,59 @@ $("#chat-clear").on("click", function(event) {
 
 
 //ajax
-$("#addGif").on("click", function(event) {
+// $("#addGif").on("click", function(event) {
 
-    event.preventDefault();
-    $("#gifDisplay").empty();
-    $("#addSendGif").empty();
+//     event.preventDefault();
+//     $("#gifDisplay").empty();
+//     $("#addSendGif").empty();
 
-    var gif = $("#gifKeyword").val().trim();
-    console.log(gif);
+//     var gif = $("#gifKeyword").val().trim();
+//     console.log(gif);
 
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        gif + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=1";
+//     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+//         gif + "&api_key=BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9&limit=1";
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response) {
-        var results = response.data;
-        console.log(results);
+//     $.ajax({
+//         url: queryURL,
+//         method: "GET"
+//     }).then(function(response) {
+//         var results = response.data;
+//         console.log(results);
 
-        for (var i = 0; i < results.length; i++) {
-            var carDiv = $("<div>");
-
-
-            var carImage = $("<img>");
-            var testING = results[i].images.fixed_height.url;
-            carImage.attr("src", testING);
-            carImage.attr("value", testING);
-            carImage.attr("id", "gifff");
-            console.log(testING);
-            // carImage.attr("data-state", "still");
-            // carImage.attr("data-still", results[i].images.fixed_height_still.url);
-            // carImage.attr("data-animate", results[i].images.fixed_height.url);
-            carImage.addClass("gif");
-
-            // var button = $("<button>");
-            // button.text("Shuffle");
-            // button.addClass("nextGif");
-
-            carDiv.append(carImage);
+//         for (var i = 0; i < results.length; i++) {
+//             var carDiv = $("<div>");
 
 
-            $("#gifDisplay").prepend(carDiv);
+//             var carImage = $("<img>");
+//             var testING = results[i].images.fixed_height.url;
+//             carImage.attr("src", testING);
+//             carImage.attr("value", testING);
+//             carImage.attr("id", "gifff");
+//             console.log(testING);
+//             // carImage.attr("data-state", "still");
+//             // carImage.attr("data-still", results[i].images.fixed_height_still.url);
+//             // carImage.attr("data-animate", results[i].images.fixed_height.url);
+//             carImage.addClass("gif");
 
-            var sendGif = $("<br><button id='sendGif-btn' type='submit' class='btn btn-danger' style = 'width: 100px; height: 50px'>");
-            sendGif.text("Send Gif");
-            $("#addSendGif").prepend(sendGif);
+//             // var button = $("<button>");
+//             // button.text("Shuffle");
+//             // button.addClass("nextGif");
 
-        }
+//             carDiv.append(carImage);
 
 
-    });
+//             $("#gifDisplay").prepend(carDiv);
 
-});
+//             var sendGif = $("<br><button id='sendGif-btn' type='submit' class='btn btn-danger' style = 'width: 100px; height: 50px'>");
+//             sendGif.text("Send Gif");
+//             $("#addSendGif").prepend(sendGif);
+
+//         }
+
+
+//     });
+
+// });
 
 $(document).on("click", "#sendGif-btn", function(event) {
 
