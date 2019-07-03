@@ -35,42 +35,42 @@ $(document).ready(function() {
             console.log("Temperature (F): " + response.main.temp);
         });
 
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
+    // function myFunction() {
+    //     document.getElementById("myDropdown").classList.toggle("show");
+    // }
 
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
-    $("#submit-btn").on("click", function(event) {
-        event.preventDefault();
-        console.log("Clicked");
-        var userName = $("#username").text();
-        var textMsg = $("#chat").val();
+    // // Close the dropdown if the user clicks outside of it
+    // window.onclick = function(event) {
+    //     if (!event.target.matches('.dropbtn')) {
+    //         var dropdowns = document.getElementsByClassName("dropdown-content");
+    //         var i;
+    //         for (i = 0; i < dropdowns.length; i++) {
+    //             var openDropdown = dropdowns[i];
+    //             if (openDropdown.classList.contains('show')) {
+    //                 openDropdown.classList.remove('show');
+    //             }
+    //         }
+    //     }
+    // }
+    // $("#submit-btn").on("click", function(event) {
+    //     event.preventDefault();
+    //     console.log("Clicked");
+    //     var userName = $("#username").text();
+    //     var textMsg = $("#chat").val();
 
-        console.log(userName);
-        console.log(textMsg);
+    //     console.log(userName);
+    //     console.log(textMsg);
 
-        // var newRow = $("<li>").append(
-        //     $("<p>").text(userName),
-        //     $("<p>").text(textMsg)
+    //     // var newRow = $("<li>").append(
+    //     //     $("<p>").text(userName),
+    //     //     $("<p>").text(textMsg)
 
-        // );
-        // console.log(newRow);
-        $("#chat-box").append("<p class='username-color'> " + userName + ":</p>");
-        $("#chat-box").append("<p class ='chat-color'>--  " + textMsg + "</p>");
+    //     // );
+    //     // console.log(newRow);
+    //     $("#chat-box").append("<p class='username-color'> " + userName + ":</p>");
+    //     $("#chat-box").append("<p class ='chat-color'>--  " + textMsg + "</p>");
 
-    });
+    // });
 
 
     // $("#addGif").on("click", function(event) {
