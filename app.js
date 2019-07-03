@@ -21,6 +21,7 @@ $("#submit-btn").on("click", function(event) {
     
   });
 
+  
 
 $("#addGif").on("click", function(event) {
         

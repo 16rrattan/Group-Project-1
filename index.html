@@ -83,15 +83,13 @@
                     <div class="mx-auto">
                         <div class="p-3 mb-2 bg-info text-white">BIO
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <button onclick="myFunction()" class="dropbtn">Users</button>
+                                <div id="myDropdown" class="dropdown-content">
+                                  <a href="">user A</a>
+                                  <a href="">user B</a>
+                                  <a href="">user C</a>
                                 </div>
-                            </div>
+                              </div>
                         </div>
                         <h4 class="text-white">Name:</h4>
                         <p class="text-white" id="username">Dandy Boy</p>
@@ -121,7 +119,7 @@
         <div class="container col-lg-5 uk-animation-slide-right" style="background-color:#343a40; height:1000px" id="chatty">
             <div class="mx-auto">
                 <div class="p-3 mb-2 bg-info text-white">Chat Window</div>
-                <div class="pre-scrollable" style="height: 700px; background-color: white" id="chat-box">
+                <div class="pre-scrollable" style="height: 900px; background-color: white" id="chat-box">
                     <ul>
 
                     </ul>
@@ -170,7 +168,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.6/js/uikit-icons.min.js"></script>
 
-
+    <script>
+        
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
 </body>
 
 
