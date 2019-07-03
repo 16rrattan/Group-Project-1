@@ -187,7 +187,7 @@ $("#submit-login").on("click", function(event) {
     }
     $("#login-name").empty()
     $("#login-password").empty()
-    window.location.replace("../../index.html");
+    window.location.replace("https://16rrattan.github.io/Group-Project-1/index.html");
 });
 
 
