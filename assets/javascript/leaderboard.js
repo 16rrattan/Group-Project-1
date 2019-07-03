@@ -268,6 +268,7 @@ function chatbuttonsubmit() {
     console.log(inputtext);
     $("#input-text").val("")
     chatdisplay();
+    $(".chat-text-box").stop().animate({ scrollTop: $(".chat-text-box")[0].scrollHeight }, 1000);
 
 }
 
@@ -410,7 +411,7 @@ $(document).on("click", "#sendGif-btn", function(event) {
         })
 
     })
-
+    $(".chat-text-box").stop().animate({ scrollTop: $(".chat-text-box")[0].scrollHeight }, 1000);
 });
 
 
