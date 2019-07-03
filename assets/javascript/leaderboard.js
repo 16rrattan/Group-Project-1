@@ -54,13 +54,24 @@ $(".add-project").on("click", function(event) {
 
 
 
-//code when the leaderboard is clicked -->
+//code when the leaderboard or bio is clicked -->
 
 $("body").on("click ", '.link', function() {
     console.log("button works")
     console.log(this.id);
     database.ref('profiles/' + this.id + "/project").once("value", function(snapshot) {
 
+        window.open(snapshot.val())
+    })
+
+});
+
+$("body").on("click ", '.git', function() {
+    console.log("button works")
+    console.log(this.id);
+    database.ref('profiles/' + this.id + "/github").once("value", function(snapshot) {
+        console.log(this.id)
+        console.log(snapshot.val())
         window.open(snapshot.val())
     })
 
@@ -403,7 +414,51 @@ $(document).on("click", "#sendGif-btn", function(event) {
 });
 
 
-//
+
+function biolist() {
+
+
+    var ranking = firebase.database().ref("ranking/");
+
+    ranking.orderByValue().on("value", function(data) {
+        cleartopdiv();
+        console.log("wrote to top div")
+        data.forEach(function(data) {
+            var buttons = $('<button class="btn btn-sm btn-info biolist" style="margin: 3px"' + 'id="' + data.key + '">' + data.key + '</button>')
+            $(".bio_list").append(buttons);
+            console.log("big dumb dumb")
+        });
+
+    });
+
+}
+
+
+$("body").on("click ", '.biolist', function() {
+    var bioname;
+    var biogithub;
+    var biobio;
+    $("#bio_name").empty();
+    $("#bio_github").empty();
+    $("#bio-bio").empty();
+    console.log("button works")
+    console.log(this.id);
+    database.ref('profiles/' + this.id + "/name").once("value", function(snapshot) {
+        bioname = snapshot.val();
+        console.log(bioname);
+        $("#bio_name").append(bioname);
+        var biobutton = $('<button class="btn btn-danger git" id="' + bioname + '">Github Profile</button>')
+        $("#bio_github").append(biobutton);
+    })
+    database.ref('profiles/' + this.id + "/bio").once("value", function(snapshot) {
+        biobio = snapshot.val();
+        console.log(biobio);
+        $("#bio_bio").append(biobio);
+    })
+
+
+
+});
 
 
 
@@ -412,6 +467,6 @@ $(document).on("click", "#sendGif-btn", function(event) {
 
 
 
-
+biolist();
 chatdisplaystart();
 display();

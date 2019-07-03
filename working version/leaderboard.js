@@ -256,5 +256,23 @@ $("chat-submit").on("click", function(event) {
 
 
 
+//this is the code for the list of bio buttons
+function biolist() {
 
+
+    var ranking = firebase.database().ref("ranking/");
+
+    ranking.orderByValue().on("value", function(data) {
+        cleartopdiv();
+        console.log("wrote to top div")
+        data.forEach(function(data) {
+            var buttons = $('<button class="btn btn-info link" style="margin: 3px"' + 'id="' + data.key + '">' + data.key + '</button>')
+            $(".bio_list").append(buttons);
+        });
+
+    });
+
+}
+
+biolist();
 display();
