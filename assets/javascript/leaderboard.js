@@ -185,6 +185,9 @@ $("#submit-login").on("click", function(event) {
             }
         })
     }
+    $("#login-name").empty()
+    $("#login-password").empty()
+    window.location.replace("../../index.html");
 });
 
 
